@@ -1,6 +1,6 @@
 # cloudwatch-exporter-emr
 
-## Exporting Metrics fro Ganglia
+## Exporting Metrics from Ganglia
 | metric name | Title | Description |
 |----|----|------------|
 | cpu_aidle | CPU aidle | Percent of time since boot idle CPU |
@@ -17,3 +17,10 @@
 | mem_total | Memory Total | Total amount of memory displayed in KBs |
 | swap_free | Free Swap Space | Amount of available swap memory |
 | swap_total | Swap Space Total | Total amount of swap space displayed in KBs |
+
+## Exporting Metrics from presto jmx
+
+Add to EMR configuration
+```json
+[{"classification":"presto-connector-jmx", "properties":{}, "configurations":[]}]
+```
